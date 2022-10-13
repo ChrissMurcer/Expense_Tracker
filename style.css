@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+    --primary-color: #252830;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85vw;
+    height: 80vh;
+    border-radius: 15px;
+    
+    /* delete this border latex */
+    border: 1px solid gray;
+}
+
+.input-container {
+    display: flex;
+    width: 40%;
+}
+
+.input {
+    flex: 1;
+    margin: 1rem 0.5rem;
+}
+
+.btn {
+    font-family: inherit;
+    padding: 0.5rem 1rem;
+}
