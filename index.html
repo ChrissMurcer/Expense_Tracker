@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Expense Tracker</title>
-</head>
+  </head>
 
-<body>
-    <h1>Expense Tracker</h1>
-    <input type="number" id="Expense_input">
-    <input type="number" id="Ex_input">
-    <input type="button" value="Submit" onclick="getExpenseValue()">
-    <p id="subtraction"></p>
-
+  <body>
+    <div class="container">
+      <h1>Expense Tracker</h1>
+      <div class="input-container">
+        <input class="input" type="number" id="Expense_input"/>
+        <input class="input" type="number" id="Ex_input"/>
+      </div>
+      <input class="btn" type="button" value="Submit" onclick="getExpenseValue()"/>
+      <p id="subtraction"></p>
+    </div>
 
     <script>
-        function getInputValue(){
-            var inputVal = document.getElementById("Expense_input").value;
-            let h2 = document.createElement("h2");
-            let textNode = document.createTextNode(inputVal);
-            h2.appendChild(textNode);
-            document.body.appendChild(h2);
-            
-            //alert(inputVal);
-        }
-        function getExpenseValue(){
-            var inputVal = parseFloat(document.getElementById("Expense_input").value);
-            var inputVal2 = parseFloat(document.getElementById("Ex_input").value);
-            let subtraction = inputVal - inputVal2;
-            document.getElementById("subtraction").innerHTML = subtraction.toFixed(2);
-        }
+      function getInputValue() {
+        var inputVal = document.getElementById("Expense_input").value;
+        let h2 = document.createElement("h2");
+        let textNode = document.createTextNode(inputVal);
+        h2.appendChild(textNode);
+        document.body.appendChild(h2);
+
+        //alert(inputVal);
+      }
+      function getExpenseValue() {
+        var inputVal = parseFloat(
+          document.getElementById("Expense_input").value
+        );
+        var inputVal2 = parseFloat(document.getElementById("Ex_input").value);
+        let subtraction = inputVal - inputVal2;
+        document.getElementById("subtraction").innerHTML =
+          subtraction.toFixed(2);
+      }
     </script>
-</body>
+  </body>
 </html>
